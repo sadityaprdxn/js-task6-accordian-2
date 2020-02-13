@@ -84,7 +84,7 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 a { 
@@ -106,12 +106,109 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+.accordians { font-size: 13px; }
+
+.accordians ul {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
 
 
+.plus {
+  text-indent: -9999px;
+  display: inline-block;
+  position: absolute;
+  right: 3%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.plus::before {
+  content: '\f055';
+  font-family: "fontAwesome";
+  text-indent: 0;
+  float: left;
+  font-size: 16px;
+  border-radius: 50%;
+  color: #FFF;
+  font-weight: 300;
+}
+
+.minus {
+  text-indent: -9999px;
+  display: inline-block;
+  position: absolute;
+  right: 3%;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
 
 
+.minus::before {
+  content: '\f056';
+  font-family: "fontAwesome";
+  text-indent: 0;
+  float: left;
+  font-size: 16px;
+  border-radius: 50%;
+  color: #FFF;
+  font-weight: 300;
+}
+
+h2 { text-transform: uppercase; }
+
+.face {
+  padding: 2%;
+  position: relative;
+  background-color: #ffa41b;
+  color: #21243d;
+}
+
+.accordians article {
+  max-height: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: rgba(0,0,0,0.07);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.accordians article h2,
+.accordians article p {
+  padding: 5px 3%;
+  font-weight: lighter;
+  line-height: 23px;
+}
 
 
+.accordians article a {
+  padding: 8px 15px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin: 10px 3%;
+  background-color: #ffa41b;
+  color: #21243d;
+  text-transform: capitalize;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.accordians article a:hover {
+  background-color: #21243D;
+  color: #FFF;
+}
+
+.active article {
+  max-height: 300px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.accordians ul li:last-child article {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -120,13 +217,6 @@ li {
   main styling starts here
 =================================*/
 
-
-
-
-
-
-
-
 /*=================================
   main styling ends here
 =================================*/
@@ -134,21 +224,19 @@ li {
 /*=================================
   footer styling starts here
 =================================*/ 
-
-
-
-
-
-
-
  /*=================================
   footer styling ends here
 =================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+@media only screen and (max-width: 768px) {
 
-
+  .accordians{
+    font-size: 12px;
+  }
+  .accordians ul{
+    width: 100%;
+  }
 
 }  
