@@ -163,6 +163,7 @@ h2 { text-transform: uppercase; }
   position: relative;
   background-color: #ffa41b;
   color: #21243d;
+  cursor: pointer;
 }
 
 .accordians article {
